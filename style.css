@@ -1,1 +1,102 @@
+/* 1. ESTILOS GENERALES */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
 
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* 2. NAVEGACIÓN Y MAPA */
+nav ul {
+    background: #ecf0f1;
+    padding: 10px;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+#map {
+    border-bottom: 3px solid #2c3e50;
+}
+
+/* 3. DISEÑO DE LAS 24 EXPERIENCIAS (GRID) */
+.experiences-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.experience-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.experience-card:hover {
+    transform: scale(1.03);
+}
+
+.experience-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Esto asegura que todas las fotos tengan el mismo tamaño */
+}
+
+.experience-card p {
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* 4. TÍTULOS DE SECCIONES */
+section {
+    padding: 40px 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #27ae60;
+    border-bottom: 2px solid #27ae60;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.subsection h3 {
+    color: #2c3e50;
+    margin-left: 20px;
+}
