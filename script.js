@@ -1,16 +1,41 @@
-// Lógica de Idioma
+// 1. FUNCIONALIDAD DE IDIOMAS
 function toggleLanguage() {
     const esElements = document.querySelectorAll('.lang-es');
     const enElements = document.querySelectorAll('.lang-en');
-    
-    esElements.forEach(el => el.style.display = el.style.display === 'none' ? 'block' : 'none');
-    enElements.forEach(el => el.style.display = el.style.display === 'none' ? 'block' : 'none');
+    const isEnglish = enElements[0].style.display === 'block';
+
+    if (isEnglish) {
+        // Cambiar a Español
+        enElements.forEach(el => el.style.display = 'none');
+        esElements.forEach(el => el.style.display = 'block');
+    } else {
+        // Cambiar a Inglés
+        esElements.forEach(el => el.style.display = 'none');
+        enElements.forEach(el => el.style.display = 'block');
+    }
 }
 
-// Lógica del Mapa centrado en Fusagasugá
-var map = L.map('map').setView([4.3365, -74.3638], 13);
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+// 2. CONFIGURACIÓN DEL MAPA (LEAFLET)
+// Coordenadas de Fusagasugá
+const fusaCoords = [4.3361, -74.3638];
 
-// Ejemplo de pin para una experiencia real
-L.marker([4.3365, -74.3638]).addTo(map)
-    .bindPopup('Fusagasugá: Ciudad Jardín');
+// Inicializar el mapa
+const map = L.map('map').setView(fusaCoords, 13);
+
+// Añadir capa de OpenStreetMap
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+// 3. AÑADIR PUNTOS DE INTERÉS (MARCADORES)
+// Ejemplo: Hacienda Coloma
+L.marker([4.3285, -74.3540]).addTo(map)
+    .bindPopup('<b>Hacienda Coloma</b><br>Tour del Café / Coffee Tour');
+
+// Ejemplo: Cerro del Quininí (Ubicación aproximada de acceso)
+L.marker([4.3000, -74.4500]).addTo(map)
+    .bindPopup('<b>Cerro del Quininí</b><br>Senderismo / Hiking');
+
+// Ejemplo: Plaza Mayor
+L.marker([4.3368, -74.3631]).addTo(map)
+    .bindPopup('<b>Plaza Mayor</b><br>Cultura / Culture');
