@@ -1,1 +1,51 @@
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronomía - Fusagasugá</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="lang-es">Gastronomía Local</h1>
+        <h1 class="lang-en" style="display:none;">Local Gastronomy</h1>
+        <button onclick="toggleLanguage()">English / Español</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="naturaleza.html">Naturaleza</a></li>
+            <li><a href="gastronomia.html">Gastronomía</a></li>
+            <li><a href="flora.html">Flora</a></li>
+            <li><a href="cultura.html">Cultura</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="experiences-container">
+            <div class="experience-card">
+                <img src="assets/img/coloma.jpg" alt="Hacienda Coloma">
+                <div class="content">
+                    <p class="lang-es"><strong>Hacienda Coloma:</strong> Una experiencia cafetera auténtica donde los visitantes aprenden el proceso artesanal desde la semilla hasta la taza, finalizando con una cata profesional y su famoso licor de café.</p>
+                    <p class="lang-en" style="display:none;"><strong>Hacienda Coloma:</strong> An authentic coffee experience where visitors learn the artisanal process from seed to cup, ending with a professional tasting and their famous coffee liqueur.</p>
+                </div>
+            </div>
+            <div class="experience-card">
+                <img src="assets/img/esperanza.jpg" alt="Café La Esperanza">
+                <div class="content">
+                    <p class="lang-es"><strong>Café La Esperanza:</strong> Finca dedicada a la producción de cafés de especialidad con procesos orgánicos, destacando los sabores frutales y el cuerpo balanceado de la montaña fusagasugueña.</p>
+                    <p class="lang-en" style="display:none;"><strong>La Esperanza Coffee:</strong> Farm dedicated to producing specialty coffees with organic processes, highlighting the fruity flavors and balanced body of the Fusagasugá mountains.</p>
+                </div>
+            </div>
+            <div class="experience-card">
+                <img src="assets/img/almojabana.jpg" alt="Almojabana">
+                <div class="content">
+                    <p class="lang-es"><strong>Almojábanas Tradicionales:</strong> Reconocidas como el pasabocas icónico de la región, preparadas con maíz y queso fresco, horneadas hasta obtener una textura esponjosa y un sabor inigualable.</p>
+                    <p class="lang-en" style="display:none;"><strong>Traditional Almojábanas:</strong> Recognized as the iconic snack of the region, prepared with corn and fresh cheese, baked to achieve a fluffy texture and unmatched flavor.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
