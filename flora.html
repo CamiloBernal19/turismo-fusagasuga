@@ -1,1 +1,44 @@
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flora - Ciudad Jardín</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="lang-es">Flora y Viveros</h1>
+        <h1 class="lang-en" style="display:none;">Flora & Nurseries</h1>
+        <button onclick="toggleLanguage()">English / Español</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="naturaleza.html">Naturaleza</a></li>
+            <li><a href="gastronomia.html">Gastronomía</a></li>
+            <li><a href="flora.html">Flora</a></li>
+            <li><a href="cultura.html">Cultura</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="experiences-container">
+            <div class="experience-card">
+                <img src="assets/img/rosal.jpg" alt="Viveros">
+                <div class="content">
+                    <p class="lang-es"><strong>Ruta de los Viveros:</strong> Fusagasugá es el principal productor de plantas ornamentales del país. Esta ruta ofrece un recorrido por jardines llenos de rosas, azaleas y plantas exóticas de exportación.</p>
+                    <p class="lang-en" style="display:none;"><strong>Nursery Route:</strong> Fusagasugá is the main producer of ornamental plants in the country. This route offers a tour through gardens full of roses, azaleas, and exotic export plants.</p>
+                </div>
+            </div>
+            <div class="experience-card">
+                <img src="assets/img/cattleya.jpg" alt="Orquídeas">
+                <div class="content">
+                    <p class="lang-es"><strong>Orquidearios Locales:</strong> Espacios dedicados a la conservación de la Cattleya y otras especies de orquídeas, donde se explica la importancia de estas flores en el ecosistema andino.</p>
+                    <p class="lang-en" style="display:none;"><strong>Local Orchid Gardens:</strong> Spaces dedicated to the conservation of Cattleya and other orchid species, where the importance of these flowers in the Andean ecosystem is explained.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
