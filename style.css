@@ -1,102 +1,162 @@
-/* 1. ESTILOS GENERALES */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
+/* 1. CONFIGURACIÓN DE COLORES Y FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --verde-fusa: #2e7d32; /* Verde Jardín */
+    --cafe-tierra: #5d4037; /* Color Café */
+    --blanco-puro: #ffffff;
+    --gris-fondo: #f8f9fa;
+    --texto-oscuro: #212121;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
+/* 2. ESTILOS BASE */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--gris-fondo);
+    color: var(--texto-oscuro);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 3. HEADER PROFESIONAL CON GRADIENTE */
 header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 1rem;
+    background: linear-gradient(135deg, var(--verde-fusa), var(--cafe-tierra));
+    color: var(--blanco-puro);
+    padding: 60px 20px;
     text-align: center;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 header button {
-    background-color: #27ae60;
-    color: white;
+    background: var(--blanco-puro);
+    color: var(--verde-fusa);
     border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
+    padding: 12px 30px;
     font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-/* 2. NAVEGACIÓN Y MAPA */
+header button:hover {
+    background: var(--cafe-tierra);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* 4. MENÚ DE NAVEGACIÓN MODERNO */
+nav {
+    background: var(--blanco-puro);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
 nav ul {
-    background: #ecf0f1;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
     list-style: none;
-    text-align: center;
+    padding: 15px 0;
     margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #2c3e50;
-    font-weight: bold;
+    color: var(--texto-oscuro);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: 0.3s;
 }
 
-#map {
-    border-bottom: 3px solid #2c3e50;
+nav ul li a:hover {
+    color: var(--verde-fusa);
 }
 
-/* 3. DISEÑO DE LAS 24 EXPERIENCIAS (GRID) */
+/* 5. DISEÑO DE TARJETAS DE EXPERIENCIA (GRID PROFESIONAL) */
 .experiences-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .experience-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 300px;
+    background: var(--blanco-puro);
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    box-shadow: var(--shadow);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .experience-card:hover {
-    transform: scale(1.03);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .experience-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover; /* Esto asegura que todas las fotos tengan el mismo tamaño */
+    height: 250px;
+    object-fit: cover;
 }
 
-.experience-card p {
-    padding: 15px;
-    font-size: 14px;
+.experience-card .content {
+    padding: 20px;
 }
 
-/* 4. TÍTULOS DE SECCIONES */
+.experience-card strong {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--verde-fusa);
+    margin-bottom: 10px;
+}
+
+/* 6. ESTILOS PARA EL MAPA */
+#map {
+    height: 450px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    border: 5px solid white;
+}
+
+/* 7. SECCIONES Y TÍTULOS */
 section {
-    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 40px auto;
 }
 
 h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    color: var(--cafe-tierra);
     text-align: center;
-    color: #27ae60;
-    border-bottom: 2px solid #27ae60;
-    display: inline-block;
-    width: 100%;
-    padding-bottom: 10px;
+    margin-bottom: 40px;
+    position: relative;
 }
 
-.subsection h3 {
-    color: #2c3e50;
-    margin-left: 20px;
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--verde-fusa);
+    margin: 10px auto;
 }
