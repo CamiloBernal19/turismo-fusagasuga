@@ -2,16 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cultura - Fusagasugá</title>
+    <title>Cultura - FusaNatural</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1 class="lang-es">Cultura y Patrimonio</h1>
-        <h1 class="lang-en" style="display:none;">Culture & Heritage</h1>
-        <button onclick="toggleLanguage()">English / Español</button>
+        <div class="brand-wrapper">
+            <h1 class="lang-es">FusaNatural</h1>
+            <h1 class="lang-en" style="display:none;">FusaNatural</h1>
+        </div>
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <div class="logo-fn">FN</div>
+            <button onclick="toggleLanguage()" class="btn-lang">ES/EN</button>
+        </div>
     </header>
+
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
@@ -21,24 +26,35 @@
             <li><a href="cultura.html">Cultura</a></li>
         </ul>
     </nav>
+
     <main>
-        <div class="experiences-container">
-            <div class="experience-card">
+        <section style="text-align: center; padding: 20px;">
+            <h2 class="lang-es">Cultura y Patrimonio</h2>
+            <h2 class="lang-en" style="display:none;">Culture & Heritage</h2>
+        </section>
+
+        <div class="experiences-grid">
+            <div class="card">
                 <img src="assets/img/plaza.jpg" alt="Plaza Mayor">
-                <div class="content">
-                    <p class="lang-es"><strong>Plaza Mayor de Fusagasugá:</strong> Centro histórico y punto de encuentro cultural, rodeado de arquitectura republicana y la imponente Iglesia de Nuestra Señora de Belén.</p>
-                    <p class="lang-en" style="display:none;"><strong>Main Square of Fusagasugá:</strong> Historical center and cultural meeting point, surrounded by Republican architecture and the imposing Church of Our Lady of Belén.</p>
+                <div class="card-content">
+                    <p class="lang-es"><strong>Plaza Mayor:</strong> Corazón histórico de la ciudad con arquitectura colonial y republicana.</p>
+                    <p class="lang-en" style="display:none;"><strong>Main Square:</strong> Historical heart of the city with colonial and republican architecture.</p>
                 </div>
             </div>
-            <div class="experience-card">
+            <div class="card">
                 <img src="assets/img/casa_cultura.jpg" alt="Casa de la Cultura">
-                <div class="content">
-                    <p class="lang-es"><strong>Casa de la Cultura:</strong> Una casona antigua que alberga museos arqueológicos con piezas de la cultura Panche y salones dedicados al arte contemporáneo regional.</p>
-                    <p class="lang-en" style="display:none;"><strong>House of Culture:</strong> An old mansion that houses archaeological museums with pieces from the Panche culture and rooms dedicated to regional contemporary art.</p>
+                <div class="card-content">
+                    <p class="lang-es"><strong>Casa de la Cultura:</strong> Centro de formación artística y museo de piezas prehispánicas.</p>
+                    <p class="lang-en" style="display:none;"><strong>House of Culture:</strong> Center for artistic training and museum of pre-Hispanic pieces.</p>
                 </div>
             </div>
         </div>
     </main>
+
+    <footer>
+        <p><strong>Alcaldía de Fusagasugá - Secretaría de Cultura y Turismo</strong></p>
+        <p>&copy; 2026 Camilo Bernal - Multimedia UNAD</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
