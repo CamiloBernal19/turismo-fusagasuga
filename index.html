@@ -2,17 +2,17 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turismo Fusagasugá - Inicio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>FusaNatural - Guía de Turismo</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
+
     <header>
-        <h1 class="lang-es">Turismo Fusagasugá</h1>
-        <h1 class="lang-en" style="display:none;">Fusagasugá Tourism</h1>
-        <button onclick="toggleLanguage()">English / Español</button>
+        <div class="logo-container">
+            <h1 class="lang-es">FusaNatural</h1>
+            <h1 class="lang-en" style="display:none;">FusaNatural</h1>
+            <div class="logo-placeholder">FN</div> </div>
+        <button onclick="toggleLanguage()">ES/EN</button>
     </header>
 
     <nav>
@@ -26,16 +26,17 @@
     </nav>
 
     <main>
-        <section>
-            <h2 class="lang-es">Mapa de Experiencias</h2>
-            <h2 class="lang-en" style="display:none;">Experience Map</h2>
-            <p class="lang-es">Explora los puntos clave de la Ciudad Jardín directamente en nuestro mapa interactivo.</p>
-            <p class="lang-en" style="display:none;">Explore the key points of the Garden City directly on our interactive map.</p>
-            <div id="map"></div>
-        </section>
-    </main>
+        </main>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <footer>
+        <div class="footer-info">
+            <p><strong>Alcaldía de Fusagasugá - Oficina de Turismo</strong></p>
+            <p>Calle 6 # 6-24, Centro Administrativo Municipal (CAM)</p>
+            <p>Redes: @AlcaldiaFusa | @TurismoFusa</p>
+            <p>&copy; 2026 Proyecto Multimedia - Camilo Bernal</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
