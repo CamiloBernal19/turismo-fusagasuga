@@ -2,21 +2,19 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FusaNatural - Guía Turística</title>
+    <title>FusaNatural - Inicio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
-
     <header>
-        <div class="header-left">
+        <div class="brand-wrapper">
             <h1 class="lang-es">FusaNatural</h1>
             <h1 class="lang-en" style="display:none;">FusaNatural</h1>
         </div>
         <div style="display: flex; align-items: center; gap: 20px;">
-            <button class="btn-lang" onclick="toggleLanguage()">ES/EN</button>
-            <div class="logo-fn" title="Logo FusaNatural">FN</div>
+            <div class="logo-fn">FN</div>
+            <button onclick="toggleLanguage()">ES/EN</button>
         </div>
     </header>
 
@@ -31,37 +29,12 @@
     </nav>
 
     <main>
-        <div id="map" style="height: 500px; width: 100%;"></div>
-
-        <div class="experiences-container">
-            <div class="experience-card">
-                <img src="assets/img/quinini.jpg" alt="Quinini">
-                <div class="content">
-                    <p class="lang-es"><strong>Cerro del Quininí:</strong> Explora la montaña sagrada de los Panches.</p>
-                    <p class="lang-en" style="display:none;"><strong>Quinini Hill:</strong> Explore the sacred mountain of the Panches.</p>
-                </div>
-            </div>
-            <div class="experience-card">
-                <img src="assets/img/coloma.jpg" alt="Coloma">
-                <div class="content">
-                    <p class="lang-es"><strong>Hacienda Coloma:</strong> El mejor tour cafetero de la región.</p>
-                    <p class="lang-en" style="display:none;"><strong>Hacienda Coloma:</strong> The best coffee tour in the region.</p>
-                </div>
-            </div>
-            <div class="experience-card">
-                <img src="assets/img/rosal.jpg" alt="Viveros">
-                <div class="content">
-                    <p class="lang-es"><strong>Ruta de Viveros:</strong> Descubre por qué somos la Ciudad Jardín.</p>
-                    <p class="lang-en" style="display:none;"><strong>Nursery Route:</strong> Discover why we are the Garden City.</p>
-                </div>
-            </div>
-        </div>
+        <div id="map"></div>
     </main>
 
     <footer>
         <p><strong>Alcaldía de Fusagasugá - Secretaría de Cultura y Turismo</strong></p>
-        <p>Dirección: Calle 6 # 6-24, Centro Administrativo Municipal (CAM)</p>
-        <p>Redes: @AlcaldiaFusa | @TurismoFusa</p>
+        <p>Calle 6 # 6-24 Centro Administrativo Municipal - CAM</p>
         <p>&copy; 2026 Camilo Bernal - Multimedia UNAD</p>
     </footer>
 
