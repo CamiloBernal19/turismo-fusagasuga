@@ -8,7 +8,7 @@
 
 body { font-family: 'Poppins', sans-serif; margin: 0; background-color: var(--gris-fondo); }
 
-/* Header: Nombre a la izquierda, Logo FN a la derecha */
+/* Header con logo FN a la derecha */
 header {
     background: white;
     padding: 15px 5%;
@@ -18,22 +18,28 @@ header {
     border-bottom: 4px solid var(--verde-fusa);
 }
 
+.brand-title {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--verde-fusa);
+    font-size: 1.6rem;
+    margin: 0;
+}
+
 .logo-fn {
     width: 45px; height: 45px;
     background-color: var(--rojo-fusa);
     color: white; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     font-weight: bold; font-family: 'Montserrat', sans-serif;
-    order: 2; /* Asegura que esté a la derecha */
 }
 
-/* Menú con el hover que pidió el profe */
+/* Menú con Hover notorio */
 nav { background: var(--verde-fusa); position: sticky; top: 0; z-index: 1000; }
 nav ul { list-style: none; display: flex; justify-content: center; margin: 0; padding: 0; }
-nav ul li a { color: white; text-decoration: none; padding: 15px 25px; display: block; font-weight: 600; }
+nav ul li a { color: white; text-decoration: none; padding: 15px 25px; display: block; font-weight: 600; transition: 0.3s; }
 nav ul li a:hover { background-color: var(--rojo-fusa); }
 
-/* Tu Grid de 3 columnas original */
+/* Grid de 3 columnas para todas las secciones */
 .experiences-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -41,8 +47,13 @@ nav ul li a:hover { background-color: var(--rojo-fusa); }
     max-width: 1200px; margin: 0 auto;
 }
 
-.card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: 0.3s; }
+.card:hover { transform: translateY(-5px); border: 1px solid var(--rojo-fusa); }
 .card img { width: 100%; height: 200px; object-fit: cover; }
 .card-content { padding: 15px; }
 
-footer { background: #222; color: #eee; padding: 30px; text-align: center; font-size: 0.85rem; }
+/* Mapa */
+#map { height: 500px; width: 100%; }
+
+/* Footer unificado */
+footer { background: #222; color: #eee; padding: 30px; text-align: center; font-size: 0.85rem; line-height: 1.6; }
