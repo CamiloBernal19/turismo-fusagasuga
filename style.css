@@ -1,162 +1,105 @@
-/* 1. CONFIGURACIÓN DE COLORES Y FUENTES */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Poppins:wght@300;400&display=swap');
 
 :root {
-    --verde-fusa: #2e7d32; /* Verde Jardín */
-    --cafe-tierra: #5d4037; /* Color Café */
-    --blanco-puro: #ffffff;
-    --gris-fondo: #f8f9fa;
-    --texto-oscuro: #212121;
-    --shadow: 0 4px 15px rgba(0,0,0,0.1);
+    /* Paleta basada en la bandera con armonía de matices */
+    --verde-principal: #2d5a27; 
+    --rojo-acento: #a63d33;    
+    --blanco-fondo: #ffffff;
+    --gris-suave: #f4f4f4;
+    --texto: #2c3e50;
 }
 
-/* 2. ESTILOS BASE */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--gris-fondo);
-    color: var(--texto-oscuro);
     margin: 0;
-    line-height: 1.6;
+    color: var(--texto);
 }
 
-/* 3. HEADER PROFESIONAL CON GRADIENTE */
+/* HEADER UNIFICADO */
 header {
-    background: linear-gradient(135deg, var(--verde-fusa), var(--cafe-tierra));
-    color: var(--blanco-puro);
-    padding: 60px 20px;
-    text-align: center;
-    box-shadow: var(--shadow);
+    background-color: var(--blanco-fondo);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--verde-principal);
 }
 
-header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-header button {
-    background: var(--blanco-puro);
-    color: var(--verde-fusa);
-    border: none;
-    padding: 12px 30px;
-    font-weight: bold;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
-header button:hover {
-    background: var(--cafe-tierra);
+/* El logo se ubica arriba a la derecha como pidió */
+.logo-placeholder {
+    width: 50px;
+    height: 50px;
+    background-color: var(--rojo-acento);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
-    transform: translateY(-2px);
+    font-weight: bold;
+    order: 2; /* Lo mueve a la derecha del texto */
 }
 
-/* 4. MENÚ DE NAVEGACIÓN MODERNO */
+h1 {
+    font-family: 'Raleway', sans-serif;
+    color: var(--verde-principal);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* MENÚ CON HOVER MEJORADO */
 nav {
-    background: var(--blanco-puro);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    background-color: var(--verde-principal);
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
     list-style: none;
-    padding: 15px 0;
+    display: flex;
     margin: 0;
-}
-
-nav ul li {
-    margin: 0 20px;
+    padding: 0;
+    justify-content: center;
 }
 
 nav ul li a {
+    color: white;
     text-decoration: none;
-    color: var(--texto-oscuro);
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.9rem;
+    padding: 15px 25px;
+    display: block;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: var(--verde-fusa);
+    background-color: var(--rojo-acento); /* Cambio notorio pedido por el profe */
 }
 
-/* 5. DISEÑO DE TARJETAS DE EXPERIENCIA (GRID PROFESIONAL) */
-.experiences-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* FOOTER UNIFICADO */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 5%;
+    text-align: center;
+    margin-top: 50px;
 }
 
+.footer-info {
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+/* ESTILOS DE CARDS */
 .experience-card {
-    background: var(--blanco-puro);
-    border-radius: 15px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    background: white;
 }
 
 .experience-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-
-.experience-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.experience-card .content {
-    padding: 20px;
-}
-
-.experience-card strong {
-    display: block;
-    font-size: 1.2rem;
-    color: var(--verde-fusa);
-    margin-bottom: 10px;
-}
-
-/* 6. ESTILOS PARA EL MAPA */
-#map {
-    height: 450px;
-    margin: 20px;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-    border: 5px solid white;
-}
-
-/* 7. SECCIONES Y TÍTULOS */
-section {
-    max-width: 1200px;
-    margin: 40px auto;
-}
-
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
-    color: var(--cafe-tierra);
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
-}
-
-h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: var(--verde-fusa);
-    margin: 10px auto;
+    border: 2px solid var(--rojo-acento);
 }
