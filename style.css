@@ -1,114 +1,119 @@
 /* 1. CONFIGURACIÓN DE COLORES Y FUENTES */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Montserrat:wght@400;700&display=swap');
 
 :root {
-    /* Armonía de color pedida: Verde y Rojo de la bandera en tonos elegantes */
-    --verde-fusa: #1b5e20; 
-    --rojo-fusa: #b71c1c;    
-    --gris-fondo: #f4f4f4;
-    --blanco: #ffffff;
+    --verde-fusa: #2e7d32; /* Verde Jardín */
+    --cafe-tierra: #5d4037; /* Color Café */
+    --blanco-puro: #ffffff;
+    --gris-fondo: #f8f9fa;
+    --texto-oscuro: #212121;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
+/* 2. ESTILOS BASE */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--gris-fondo);
+    color: var(--texto-oscuro);
     margin: 0;
+    line-height: 1.6;
 }
 
-/* HEADER: Logo a la derecha y nombre a la izquierda */
+/* 3. HEADER PROFESIONAL CON GRADIENTE */
 header {
-    background-color: var(--blanco);
-    padding: 20px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 4px solid var(--verde-fusa);
-}
-
-.brand-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.logo-fn {
-    width: 50px;
-    height: 50px;
-    background-color: var(--rojo-fusa);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, var(--verde-fusa), var(--cafe-tierra));
+    color: var(--blanco-puro);
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
 }
 
 header h1 {
     font-family: 'Montserrat', sans-serif;
-    color: var(--verde-fusa);
-    margin: 0;
-    font-size: 1.8rem;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* MENÚ: Fondo verde, Hover rojo (más notorio) */
+header button {
+    background: var(--blanco-puro);
+    color: var(--verde-fusa);
+    border: none;
+    padding: 12px 30px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+header button:hover {
+    background: var(--cafe-tierra);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* 4. MENÚ DE NAVEGACIÓN MODERNO */
 nav {
-    background-color: var(--verde-fusa);
+    background: var(--blanco-puro);
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
+    list-style: none;
+    padding: 15px 0;
     margin: 0;
-    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
-    padding: 15px 25px;
-    display: block;
+    color: var(--texto-oscuro);
     font-weight: 600;
-    transition: 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: var(--rojo-fusa); /* Hover notorio solicitado */
+    color: var(--verde-fusa);
 }
 
-/* TU DISEÑO DE CARDS ORIGINAL (GRID) */
+/* 5. DISEÑO DE TARJETAS DE EXPERIENCIA (GRID PROFESIONAL) */
 .experiences-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas como antes */
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
     padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .experience-card {
-    background: white;
-    border-radius: 10px;
+    background: var(--blanco-puro);
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s ease;
+    box-shadow: var(--shadow);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .experience-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .experience-card img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
 }
 
@@ -116,12 +121,42 @@ nav ul li a:hover {
     padding: 20px;
 }
 
-/* FOOTER UNIFICADO */
-footer {
-    background-color: #222;
-    color: #fff;
-    padding: 30px;
+.experience-card strong {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--verde-fusa);
+    margin-bottom: 10px;
+}
+
+/* 6. ESTILOS PARA EL MAPA */
+#map {
+    height: 450px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    border: 5px solid white;
+}
+
+/* 7. SECCIONES Y TÍTULOS */
+section {
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    color: var(--cafe-tierra);
     text-align: center;
-    font-size: 0.9rem;
-    line-height: 1.6;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--verde-fusa);
+    margin: 10px auto;
 }
