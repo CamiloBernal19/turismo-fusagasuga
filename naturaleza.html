@@ -2,15 +2,19 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naturaleza - Fusagasugá</title>
+    <title>Naturaleza - FusaNatural</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1 class="lang-es">Naturaleza</h1>
-        <h1 class="lang-en" style="display:none;">Nature</h1>
-        <button onclick="toggleLanguage()">English / Español</button>
+        <div class="brand-wrapper">
+            <h1 class="lang-es">FusaNatural</h1>
+            <h1 class="lang-en" style="display:none;">FusaNatural</h1>
+        </div>
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <div class="logo-fn">FN</div>
+            <button onclick="toggleLanguage()">ES/EN</button>
+        </div>
     </header>
 
     <nav>
@@ -24,25 +28,22 @@
     </nav>
 
     <main>
-        <div class="experience-card">
-    <a href="detalle-quinini.html" style="text-decoration: none; color: inherit;">
-        <img src="assets/img/quinini.jpg" alt="Quinini">
-        <div class="content">
-            <p class="lang-es"><strong>Cerro del Quininí:</strong> Haz clic para conocer la historia y rutas de la montaña sagrada...</p>
-            <p class="lang-en" style="display:none;"><strong>Quinini Hill:</strong> Click to learn about the history and routes of the sacred mountain...</p>
-        </div>
-    </a>
-</div>
-
-            <div class="experience-card">
-                <img src="assets/img/san_rafael.jpg" alt="San Rafael">
-                <div class="content">
-                    <p class="lang-es"><strong>Reserva San Rafael:</strong> Es el pulmón hídrico de Fusagasugá. Ideal para el avistamiento de aves y caminatas por senderos de niebla, donde el contacto con el agua y el aire puro es la prioridad.</p>
-                    <p class="lang-en" style="display:none;"><strong>San Rafael Reserve:</strong> The water lung of Fusagasugá. Ideal for bird watching and hiking through cloud forest trails, where contact with water and pure air is the priority.</p>
+        <div class="experiences-grid">
+            <div class="card">
+                <img src="assets/img/quinini.jpg" alt="Quininí">
+                <div class="card-content">
+                    <p class="lang-es"><strong>Cerro del Quininí:</strong> Montaña sagrada con senderos arqueológicos y vistas panorámicas.</p>
+                    <p class="lang-en" style="display:none;"><strong>Quinini Hill:</strong> Sacred mountain with archaeological trails and panoramic views.</p>
                 </div>
             </div>
             </div>
     </main>
+
+    <footer>
+        <p><strong>Alcaldía de Fusagasugá - Secretaría de Cultura y Turismo</strong></p>
+        <p>&copy; 2026 Camilo Bernal - Multimedia UNAD</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
