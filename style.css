@@ -1,105 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400&display=swap');
 
 :root {
-    /* Paleta basada en la bandera con armonía de matices */
-    --verde-principal: #2d5a27; 
-    --rojo-acento: #a63d33;    
-    --blanco-fondo: #ffffff;
-    --gris-suave: #f4f4f4;
-    --texto: #2c3e50;
+    /* Armonía basada en la bandera de Fusa */
+    --verde-fusa: #2d5a27; 
+    --rojo-fusa: #a63d33;    
+    --gris-fondo: #f9f9f9;
+    --texto: #333;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    color: var(--texto);
+    background-color: var(--gris-fondo);
 }
 
-/* HEADER UNIFICADO */
+/* HEADER CON LOGO A LA DERECHA */
 header {
-    background-color: var(--blanco-fondo);
-    padding: 20px 5%;
+    background: white;
+    padding: 15px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid var(--verde-principal);
+    border-bottom: 4px solid var(--verde-fusa);
 }
 
-.logo-container {
+.brand {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-/* El logo se ubica arriba a la derecha como pidió */
-.logo-placeholder {
-    width: 50px;
-    height: 50px;
-    background-color: var(--rojo-acento);
+.logo-fn {
+    width: 45px;
+    height: 45px;
+    background: var(--rojo-fusa);
+    color: white;
     border-radius: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: white;
+    justify-content: center;
     font-weight: bold;
-    order: 2; /* Lo mueve a la derecha del texto */
+    font-family: 'Montserrat', sans-serif;
+    order: 2; /* Lo posiciona a la derecha del texto */
 }
 
 h1 {
-    font-family: 'Raleway', sans-serif;
-    color: var(--verde-principal);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    color: var(--verde-fusa);
     margin: 0;
-    font-size: 1.5rem;
 }
 
-/* MENÚ CON HOVER MEJORADO */
+/* MENÚ CON HOVER NOTORIO */
 nav {
-    background-color: var(--verde-principal);
+    background: var(--verde-fusa);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
     margin: 0;
     padding: 0;
-    justify-content: center;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 15px 25px;
+    padding: 15px 20px;
     display: block;
+    font-weight: 600;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: var(--rojo-acento); /* Cambio notorio pedido por el profe */
+    background: var(--rojo-fusa); /* Cambio fuerte de color pedido por el profe */
+}
+
+/* CUADRÍCULA DE TARJETAS (Como te gustaba antes) */
+.experiences-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.experience-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.experience-card img {
+    width: 100%;
+    height: 180px; /* Tamaño controlado para que no sean gigantes */
+    object-fit: cover;
+}
+
+.experience-card .content {
+    padding: 15px;
 }
 
 /* FOOTER UNIFICADO */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 40px 5%;
+    background: #222;
+    color: #ccc;
+    padding: 30px;
     text-align: center;
-    margin-top: 50px;
-}
-
-.footer-info {
     font-size: 0.9rem;
-    line-height: 1.8;
-}
-
-/* ESTILOS DE CARDS */
-.experience-card {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    background: white;
-}
-
-.experience-card:hover {
-    border: 2px solid var(--rojo-acento);
 }
