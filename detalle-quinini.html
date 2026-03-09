@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cerro del Quinini - FusaNatural</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container-det { max-width: 900px; margin: 30px auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .img-det { width: 100%; height: 450px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; border-bottom: 5px solid var(--verde-fusa); }
+        .volver { display: inline-block; margin-bottom: 15px; color: var(--rojo-fusa); text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .volver:hover { color: var(--verde-fusa); }
+        .info-det h2 { color: var(--verde-fusa); font-family: 'Montserrat'; margin-top: 0; }
+        .info-det p { line-height: 1.6; color: #444; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="brand-title">FusaNatural</h1>
+        <div class="logo-fn">FN</div>
+    </header>
 
+    <main class="container-det">
+        <a href="javascript:history.back()" class="volver">← Volver a la sección</a>
+        
+        <img src="assets/img/quinini.jpg" class="img-det" alt="Atractivo"> 
+
+        <div class="info-det">
+            <h2 class="lang-es">Cerro del Quinini</h2>
+            <h2 class="lang-en" style="display:none;">Cerro del quinini</h2>
+            
+            <p class="lang-es">Montaña sagrada con senderos que llevan a piedras arqueológicas y miradores impresionantes.</p>
+            <p class="lang-en" style="display:none;">Sacred mountain with trails leading to archaeological stones and breathtaking viewpoints.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p><strong>Alcaldía de Fusagasugá - Secretaría de Cultura y Turismo</strong></p>
+        <p>&copy; 2026 Camilo Bernal - Multimedia UNAD</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
