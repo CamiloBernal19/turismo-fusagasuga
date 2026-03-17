@@ -2,19 +2,21 @@
 function toggleLanguage() {
     const esElements = document.querySelectorAll('.lang-es');
     const enElements = document.querySelectorAll('.lang-en');
-    const isEnglish = enElements[0].style.display === 'block';
 
-    if (isEnglish) {
-        // Cambiar a Español
-        enElements.forEach(el => el.style.display = 'none');
-        esElements.forEach(el => el.style.display = 'block');
-    } else {
-        // Cambiar a Inglés
+    // Revisamos si el primer elemento de español está oculto o no
+    // getComputedStyle lee el estado real aunque venga del CSS
+    const isSpanishVisible = window.getComputedStyle(esElements[0]).display !== 'none';
+
+    if (isSpanishVisible) {
+        // OCULTAR ESPAÑOL Y MOSTRAR INGLÉS
         esElements.forEach(el => el.style.display = 'none');
         enElements.forEach(el => el.style.display = 'block');
+    } else {
+        // MOSTRAR ESPAÑOL Y OCULTAR INGLÉS
+        esElements.forEach(el => el.style.display = 'block');
+        enElements.forEach(el => el.style.display = 'none');
     }
 }
-
 // 2. CONFIGURACIÓN DEL MAPA (LEAFLET)
 // Coordenadas de Fusagasugá
 const fusaCoords = [4.3361, -74.3638];
