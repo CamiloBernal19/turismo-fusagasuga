@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cafe La Esperanza - FusaNatural</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container-det { max-width: 900px; margin: 30px auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .img-det { width: 100%; height: 450px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; border-bottom: 5px solid var(--verde-fusa); }
+        .volver { display: inline-block; margin-bottom: 15px; color: var(--rojo-fusa); text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .volver:hover { color: var(--verde-fusa); }
+        .info-det h2 { color: var(--verde-fusa); font-family: 'Montserrat'; margin-top: 0; }
+        .info-det p { line-height: 1.6; color: #444; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="brand-title">FusaNatural</h1>
+        <div class="logo-fn">FN</div>
+    </header>
 
+    <main class="container-det">
+        <a href="javascript:history.back()" class="volver">← Volver a la sección</a>
+        
+        <img src="assets/img/esperanza.jpg" class="img-det" alt="Atractivo"> 
+
+        <div class="info-det">
+            <h2 class="lang-es">Cafe La Esperanza</h2>
+            <h2 class="lang-en" style="display:none;">Cafe La Esperanza</h2>
+            
+            <p class="lang-es"> Aunque se encuentra técnicamente en el municipio vecino de Silvania (muy cerca de Fusagasugá), es un referente importante en la zona por su enfoque en cafés de especialidad y turismo experiencial. Ofrecen tours donde se explica el proceso del grano desde la planta hasta la taza, destacándose por sus altos estándares de calidad y su compromiso ambiental.<br>
+            </p>
+            <p class="lang-en" style="display:none;">Although technically located in the neighboring municipality of Silvania (very close to Fusagasugá), it is an important landmark in the area due to its focus on specialty coffees and experiential tourism. They offer tours that explain the coffee bean's journey from plant to cup, standing out for their high quality standards and environmental commitment.<br>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p><strong>Alcaldía de Fusagasugá - Secretaría de Cultura y Turismo</strong></p>
+        <p>&copy; 2026 Camilo Bernal - Multimedia UNAD</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
