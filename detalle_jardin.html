@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Jardin Ornamental - FusaNatural</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container-det { max-width: 900px; margin: 30px auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .img-det { width: 100%; height: 450px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; border-bottom: 5px solid var(--verde-fusa); }
+        .volver { display: inline-block; margin-bottom: 15px; color: var(--rojo-fusa); text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .volver:hover { color: var(--verde-fusa); }
+        .info-det h2 { color: var(--verde-fusa); font-family: 'Montserrat'; margin-top: 0; }
+        .info-det p { line-height: 1.6; color: #444; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="brand-title">FusaNatural</h1>
+        <div class="logo-fn">FN</div>
+    </header>
 
+    <main class="container-det">
+        <a href="javascript:history.back()" class="volver">← Volver a la sección</a>
+        
+        <img src="assets/img/jardin.jpg" class="img-det" alt="Atractivo"> 
+
+        <div class="info-det">
+            <h2 class="lang-es">Jardin Ornamental</h2>
+            <h2 class="lang-en" style="display:none;">Jardin Ornamental</h2>
+            
+            <p class="lang-es">El Cinturón de Viveros (Vía Antigua Panamericana)<br>
+              Fusagasugá no tiene un único jardín botánico central, sino que toda su periferia es un gran jardín ornamental. A lo largo de la vía que conecta con Bogotá y Sibaté, existen más de 1.200 viveros. <br>
+              Vivero Jardín Andaluz: Es uno de los más emblemáticos y antiguos (más de 50 años). Funciona como un jardín de exhibición donde puedes ver paisajismo real, fuentes y una colección inmensa de plantas de flor.<br>
+              Variedad: Se especializan en plantas ornamentales de clima medio y frío, como anturios, orquídeas, bromelias, veraneras y helechos.<br>
+            </p>
+            <p class="lang-en" style="display:none;">The Nursery Belt (Old Pan-American Highway)<br>
+              Fusagasugá doesn't have a single central botanical garden; instead, its entire surrounding area is a large ornamental garden. Along the road connecting it to Bogotá and Sibaté, there are more than 1,200 nurseries.<br>
+              Andalusian Garden Nursery: It is one of the most emblematic and oldest (more than 50 years old). It functions as a show garden where you can see real landscaping, fountains, and an immense collection of flowering plants.<br>
+              Variety: They specialize in ornamental plants from medium and cold climates, such as anthuriums, orchids, bromeliads, bougainvillea, and ferns.<br>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p><strong>Alcaldía de Fusagasugá - Secretaría de Cultura y Turismo</strong></p>
+        <p>&copy; 2026 Camilo Bernal - Multimedia UNAD</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
