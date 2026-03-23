@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Casa de la cultura - FusaNatural</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container-det { max-width: 900px; margin: 30px auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .img-det { width: 100%; height: 450px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; border-bottom: 5px solid var(--verde-fusa); }
+        .volver { display: inline-block; margin-bottom: 15px; color: var(--rojo-fusa); text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .volver:hover { color: var(--verde-fusa); }
+        .info-det h2 { color: var(--verde-fusa); font-family: 'Montserrat'; margin-top: 0; }
+        .info-det p { line-height: 1.6; color: #444; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="brand-title">FusaNatural</h1>
+        <div class="logo-fn">FN</div>
+    </header>
 
+    <main class="container-det">
+        <a href="javascript:history.back()" class="volver">← Volver a la sección</a>
+        
+        <img src="assets/img/san_rafael.jpg" class="img-det" alt="Atractivo"> 
+
+        <div class="info-det">
+            <h2 class="lang-es">Casa de la Cultura</h2>
+            <h2 class="lang-en" style="display:none;">Casa de la Cultura</h2>
+            
+            <p class="lang-es">La Casa de la Cultura de Fusagasugá, ubicada en una imponente construcción de estilo republicano en el centro del municipio, es el epicentro del desarrollo artístico y el resguardo de la memoria histórica local. Este espacio no solo destaca por su valor arquitectónico y sus amplios salones, sino que también funciona como sede de las Escuelas de Formación Artística, donde se imparten programas de música, danza, artes plásticas y literatura para toda la comunidad. Además, sus galerías suelen albergar exposiciones permanentes y temporales que resaltan el talento de la región del Sumapaz, consolidándose como un punto de referencia esencial para la preservación de la identidad y la cultura fusagasugueña.<br>
+            </p>
+            <p class="lang-en" style="display:none;">The Casa de la Cultura de Fusagasugá, housed in a striking Republican-style building in the heart of the municipality, serves as the epicenter for artistic development and the guardian of local historical memory. This space is renowned not only for its architectural value and spacious halls but also as the headquarters for the Artistic Training Schools, offering programs in music, dance, visual arts, and literature to the entire community. Additionally, its galleries host permanent and temporary exhibitions that highlight the talent of the Sumapaz region, establishing it as an essential landmark for the preservation of Fusagasugá's identity and culture.<br>
+            </p>    
+        </div>
+    </main>
+
+    <footer>
+        <p><strong>Alcaldía de Fusagasugá - Secretaría de Cultura y Turismo</strong></p>
+        <p>&copy; 2026 Camilo Bernal - Multimedia UNAD</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
