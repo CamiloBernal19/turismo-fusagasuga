@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Plaza Mayor- FusaNatural</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container-det { max-width: 900px; margin: 30px auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .img-det { width: 100%; height: 450px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; border-bottom: 5px solid var(--verde-fusa); }
+        .volver { display: inline-block; margin-bottom: 15px; color: var(--rojo-fusa); text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .volver:hover { color: var(--verde-fusa); }
+        .info-det h2 { color: var(--verde-fusa); font-family: 'Montserrat'; margin-top: 0; }
+        .info-det p { line-height: 1.6; color: #444; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="brand-title">FusaNatural</h1>
+        <div class="logo-fn">FN</div>
+    </header>
 
+    <main class="container-det">
+        <a href="javascript:history.back()" class="volver">← Volver a la sección</a>
+        
+        <img src="assets/img/plaza.jpg" class="img-det" alt="Atractivo"> 
+
+        <div class="info-det">
+            <h2 class="lang-es">Plaza Mayor</h2>
+            <h2 class="lang-en" style="display:none;">Plaza Mayor</h2>
+            
+            <p class="lang-es">La Plaza Mayor de Fusagasugá, conocida oficialmente como la Plaza de los Comuneros, es el corazón histórico y social del municipio, destacándose por su diseño tradicional y su vibrante vida comercial. Este espacio público está rodeado por importantes hitos arquitectónicos como la Iglesia de Nuestra Señora de Belén y el Palacio Municipal, y se caracteriza por su amplia zona peatonal decorada con árboles nativos y jardineras que reflejan la identidad de la "Ciudad Jardín". Es el punto de encuentro principal para locales y visitantes, donde convergen la cultura, los eventos institucionales y la dinámica cotidiana de la región del Sumapaz.<br>
+            </p>
+            <p class="lang-en" style="display:none;">The Plaza Mayor de Fusagasugá, officially known as Plaza de los Comuneros, is the historical and social heart of the municipality, standing out for its traditional design and vibrant commercial life. This public space is surrounded by key architectural landmarks such as the Church of Our Lady of Belen and the Municipal Palace, and it is characterized by a spacious pedestrian area decorated with native trees and gardens that reflect its identity as the "Garden City." It serves as the main meeting point for locals and visitors alike, where culture, institutional events, and the daily rhythm of the Sumapaz region converge.<br>
+            </p>    
+        </div>
+    </main>
+
+    <footer>
+        <p><strong>Alcaldía de Fusagasugá - Secretaría de Cultura y Turismo</strong></p>
+        <p>&copy; 2026 Camilo Bernal - Multimedia UNAD</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
