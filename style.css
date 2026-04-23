@@ -7,9 +7,7 @@
     --blanco: #ffffff;
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     font-family: 'Open Sans', Arial, sans-serif;
@@ -19,138 +17,93 @@ body {
     line-height: 1.6;
 }
 
-/* --- HEADER Y NAVEGACIÓN (Corrección: Jerarquía y Menú Fijo) --- */
+/* --- HEADER Y NAV (Fijo y con Jerarquía) --- */
 header {
     background-color: var(--blanco);
-    padding: 20px 5%;
+    padding: 15px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 4px solid var(--verde-fusa);
-    position: sticky; /* Se queda fijo al bajar */
+    position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .brand-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem; /* Aumento de jerarquía visual */
+    font-size: 2.2rem;
     color: var(--verde-fusa);
     margin: 0;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: -1px;
+}
+
+nav {
+    background: var(--verde-fusa);
+    padding: 10px 0;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    gap: 25px;
     margin: 0;
     padding: 0;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: var(--texto-oscuro);
+    color: white;
     font-weight: 600;
-    transition: 0.3s ease;
-    padding: 8px 12px;
-    border-radius: 4px;
+    transition: 0.3s;
 }
 
-/* Retroalimentación visual al pasar el mouse */
 nav ul li a:hover {
-    color: var(--rojo-fusa);
-    background-color: rgba(166, 38, 38, 0.05);
+    color: #ffeb3b; /* Color de realce al pasar el mouse */
 }
 
-/* --- GRID Y TARJETAS (Corrección: Dimensiones Estándar y UX) --- */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+/* --- SECCIÓN HERO (Para que no se vea aburrido) --- */
+.hero-home {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/img/hero-fusa.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
 }
 
-.experiences-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px; /* Espaciado uniforme sugerido */
-}
+.hero-overlay h2 { font-size: 2.8rem; margin: 0; }
+.hero-overlay p { font-size: 1.2rem; margin: 10px 0 20px; }
 
-.card {
-    background: var(--blanco);
+/* --- CONTENEDOR DEL MAPA (¡Aquí vuelve a aparecer!) --- */
+#map {
+    height: 500px; /* Altura vital para que el mapa se vea */
+    width: 90%;
+    margin: 0 auto 50px auto;
     border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #eee;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border: 2px solid var(--verde-fusa);
+    z-index: 1;
 }
 
-/* Efecto hover interactivo */
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-/* Estándar de imágenes (Corrección: object-fit) */
-.card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover; /* Evita desorganización visual */
-    transition: transform 0.5s ease;
-}
-
-.card:hover img {
-    transform: scale(1.05);
-}
-
-.card-content {
-    padding: 20px;
-}
-
-.card-content p {
-    margin: 0;
-    font-size: 1.05rem;
-}
-
-/* --- FOOTER (Nueva sección sugerida) --- */
+/* --- FOOTER --- */
 footer {
     background-color: #222;
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px;
     margin-top: 50px;
 }
 
-footer p {
-    margin: 5px 0;
-    opacity: 0.8;
-}
-
-/* --- DISEÑO RESPONSIVO (Corrección: Adaptabilidad) --- */
+/* --- DISEÑO RESPONSIVO --- */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .brand-title {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .experiences-grid {
-        grid-template-columns: 1fr;
-    }
+    .brand-title { font-size: 1.6rem; }
+    nav ul { gap: 10px; font-size: 0.9rem; }
+    #map { height: 350px; }
 }
-
-/* --- UTILIDADES --- */
-.lang-en { display: none; } /* Para el sistema de idiomas */
