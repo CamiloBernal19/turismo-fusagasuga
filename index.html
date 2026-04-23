@@ -8,28 +8,44 @@
 </head>
 <body>
     <header>
-        <h1 class="brand-title">FusaNatural</h1>
-        <div style="display: flex; align-items: center; gap: 20px;">
-            <div class="logo-fn">FN</div>
-            <button onclick="toggleLanguage()" class="btn-idioma">ES / EN</button>
+    <h1 class="brand-title">FusaNatural</h1>
+    <div class="header-right">
+        <span class="logo-text">FN</span>
+        <button onclick="toggleLanguage()" class="btn-idioma">ES / EN</button>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="naturaleza.html">Naturaleza</a></li>
+        <li><a href="gastronomia.html">Gastronomía</a></li>
+        <li><a href="flora.html">Flora</a></li>
+        <li><a href="cultura.html">Cultura</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section class="hero-home">
+        <div class="hero-overlay">
+            <h2>Descubre Fusagasugá</h2>
+            <p>Explora la riqueza natural y cultural de la Ciudad Jardín de Colombia.</p>
+            <a href="#map-container" class="btn-explorar">Ver Mapa de Rutas</a>
         </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="naturaleza.html">Naturaleza</a></li>
-            <li><a href="gastronomia.html">Gastronomía</a></li>
-            <li><a href="flora.html">Flora</a></li>
-            <li><a href="cultura.html">Cultura</a></li>
-        </ul>
-    </nav>
-    <main><div id="map"></div></main>
-    <footer>
-        <p><strong>Alcaldía de Fusagasugá - Secretaría de Cultura y Turismo</strong></p>
-        <p>Calle 6 # 6-24 Centro Administrativo Municipal - CAM</p>
-        <p>&copy; 2026 Camilo Bernal - Multimedia UNAD</p>
-    </footer>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="script.js"></script>
+    </section>
+
+    <section id="map-container">
+        <h3 class="section-title">Mapa Interactivo de Destinos</h3>
+        <div id="map"></div>
+    </section>
+</main>
+
+<footer>
+    <p>Alcaldía de Fusagasugá - Secretaría de Cultura y Turismo</p>
+    <p>&copy; 2026 Camilo Bernal - Multimedia UNAD</p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
