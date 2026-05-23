@@ -17,6 +17,7 @@ body {
     line-height: 1.6;
 }
 
+/* --- HEADER Y NAV (Fijo y con Jerarquía) --- */
 /* --- HEADER Y NAV (Fijo) --- */
 header {
     background-color: var(--blanco);
@@ -28,6 +29,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .brand-title {
@@ -59,6 +61,11 @@ nav ul li a {
     transition: 0.3s;
 }
 
+nav ul li a:hover {
+    color: #ffeb3b; /* Color de realce al pasar el mouse */
+}
+
+/* --- SECCIÓN HERO (Para que no se vea aburrido) --- */
 /* --- SECCIÓN HERO (Inicio) --- */
 .hero-home {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/img/hero-fusa.jpg');
@@ -74,7 +81,9 @@ nav ul li a {
 }
 
 .hero-overlay h2 { font-size: 2.8rem; margin: 0; }
+.hero-overlay p { font-size: 1.2rem; margin: 10px 0 20px; }
 
+/* --- CONTENEDOR DEL MAPA (¡Aquí vuelve a aparecer!) --- */
 /* --- GRID DE TARJETAS (Restauración de secciones) --- */
 .experiences-grid {
     display: grid;
@@ -110,8 +119,10 @@ nav ul li a {
 
 /* --- MAPA --- */
 #map {
+    height: 500px; /* Altura vital para que el mapa se vea */
     height: 500px;
     width: 90%;
+    margin: 0 auto 50px auto;
     margin: 20px auto 50px auto;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
@@ -128,19 +139,11 @@ footer {
     margin-top: 50px;
 }
 
+/* --- DISEÑO RESPONSIVO --- */
 /* --- RESPONSIVO --- */
 @media (max-width: 768px) {
     .experiences-grid { grid-template-columns: 1fr; }
     .brand-title { font-size: 1.6rem; }
- 
-}
-
-/* Esto oculta el inglés apenas carga la página */
-.lang-en {
-    display: none !important;
-}
-
-/* Esto asegura que el español se vea al inicio */
-.lang-es {
-    display: block !important;
+    nav ul { gap: 10px; font-size: 0.9rem; }
+    #map { height: 350px; }
 }
