@@ -1,20 +1,27 @@
+// 1. FUNCIONALIDAD DE IDIOMAS
 function toggleLanguage() {
-    // 1. Obtenemos todos los elementos por su clase
     const esElements = document.querySelectorAll('.lang-es');
     const enElements = document.querySelectorAll('.lang-en');
-    
-    // 2. Verificamos si el primer elemento español está visible
-    // Usamos getComputedStyle para leer el CSS externo
-    const isSpanishActive = window.getComputedStyle(esElements[0]).display !== 'none';
+    const isEnglish = enElements[0].style.display === 'block';
 
-    if (isSpanishActive) {
-        // CAMBIAR A INGLÉS
-        esElements.forEach(el => el.style.setProperty('display', 'none', 'important'));
-        enElements.forEach(el => el.style.setProperty('display', 'block', 'important'));
+    if (isEnglish) {
+        // Cambiar a Español
+        enElements.forEach(el => el.style.display = 'none');
+        esElements.forEach(el => el.style.display = 'block');
     } else {
-        // CAMBIAR A ESPAÑOL
-        esElements.forEach(el => el.style.setProperty('display', 'block', 'important'));
-        enElements.forEach(el => el.style.setProperty('display', 'none', 'important'));
+        // Cambiar a Inglés
+    // Revisamos si el primer elemento de español está oculto o no
+    // getComputedStyle lee el estado real aunque venga del CSS
+    const isSpanishVisible = window.getComputedStyle(esElements[0]).display !== 'none';
+
+    if (isSpanishVisible) {
+        // OCULTAR ESPAÑOL Y MOSTRAR INGLÉS
+        esElements.forEach(el => el.style.display = 'none');
+        enElements.forEach(el => el.style.display = 'block');
+    } else {
+        // MOSTRAR ESPAÑOL Y OCULTAR INGLÉS
+        esElements.forEach(el => el.style.display = 'block');
+        enElements.forEach(el => el.style.display = 'none');
     }
 }
 
