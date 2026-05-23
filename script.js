@@ -1,22 +1,23 @@
-// 1. FUNCIONALIDAD DE IDIOMAS
 function toggleLanguage() {
+    // 1. Obtenemos todos los elementos por su clase
     const esElements = document.querySelectorAll('.lang-es');
     const enElements = document.querySelectorAll('.lang-en');
+    
+    // 2. Verificamos si el primer elemento español está visible
+    // Usamos getComputedStyle para leer el CSS externo
+    const isSpanishActive = window.getComputedStyle(esElements[0]).display !== 'none';
 
-    // LEER EL ESTADO REAL (Si es 'block' o 'none')
-    const currentDisplay = window.getComputedStyle(esElements[0]).display;
-
-    if (currentDisplay !== 'none') {
-        // OCULTAR ESPAÑOL Y MOSTRAR INGLÉS
-        esElements.forEach(el => el.style.display = 'none');
-        enElements.forEach(el => el.style.display = 'block');
+    if (isSpanishActive) {
+        // CAMBIAR A INGLÉS
+        esElements.forEach(el => el.style.setProperty('display', 'none', 'important'));
+        enElements.forEach(el => el.style.setProperty('display', 'block', 'important'));
     } else {
-        // MOSTRAR ESPAÑOL Y OCULTAR INGLÉS
-        esElements.forEach(el => el.style.display = 'block');
-        enElements.forEach(el => el.style.display = 'none');
+        // CAMBIAR A ESPAÑOL
+        esElements.forEach(el => el.style.setProperty('display', 'block', 'important'));
+        enElements.forEach(el => el.style.setProperty('display', 'none', 'important'));
     }
 }
-}
+
 // 2. CONFIGURACIÓN DEL MAPA (LEAFLET)
 // Coordenadas de Fusagasugá
 const fusaCoords = [4.3361, -74.3638];
