@@ -3,11 +3,10 @@ function toggleLanguage() {
     const esElements = document.querySelectorAll('.lang-es');
     const enElements = document.querySelectorAll('.lang-en');
 
-    // Revisamos si el primer elemento de español está oculto o no
-    // getComputedStyle lee el estado real aunque venga del CSS
-    const isSpanishVisible = window.getComputedStyle(esElements[0]).display !== 'none';
+    // LEER EL ESTADO REAL (Si es 'block' o 'none')
+    const currentDisplay = window.getComputedStyle(esElements[0]).display;
 
-    if (isSpanishVisible) {
+    if (currentDisplay !== 'none') {
         // OCULTAR ESPAÑOL Y MOSTRAR INGLÉS
         esElements.forEach(el => el.style.display = 'none');
         enElements.forEach(el => el.style.display = 'block');
@@ -16,6 +15,7 @@ function toggleLanguage() {
         esElements.forEach(el => el.style.display = 'block');
         enElements.forEach(el => el.style.display = 'none');
     }
+}
 }
 // 2. CONFIGURACIÓN DEL MAPA (LEAFLET)
 // Coordenadas de Fusagasugá
