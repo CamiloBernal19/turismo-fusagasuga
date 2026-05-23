@@ -132,9 +132,15 @@ footer {
 @media (max-width: 768px) {
     .experiences-grid { grid-template-columns: 1fr; }
     .brand-title { font-size: 1.6rem; }
+ 
+}
 
-    /* Esconder el inglés por defecto al cargar la página */
+/* Esto oculta el inglés apenas carga la página */
 .lang-en {
-    display: none;
-    }
+    display: none !important;
+}
+
+/* Esto asegura que el español se vea al inicio */
+.lang-es {
+    display: block !important;
 }
