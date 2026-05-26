@@ -147,3 +147,16 @@ footer {
     nav ul { gap: 10px; font-size: 0.9rem; }
     #map { height: 350px; }
 }
+
+/* Altura del mapa para que aparezca */
+#map {
+    height: 450px;
+    width: 100%;
+    margin-top: 20px;
+    z-index: 1; /* Para que no se tape con el menú */
+}
+
+/* Estado inicial de los idiomas */
+.lang-en {
+    display: none;
+}
